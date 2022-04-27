@@ -8,7 +8,7 @@ if [ "$TEST" = "" ]; then
 fi
 
 test() {
-	time -f "%e: Test $1" $TEST $1 >/dev/null
+	$TEST --nocapture $1 2>&1 | grep "duration = " | sed -e "s/duration = \(.*\)/\1 $1/g"
 }
 
 # Run tests and sort by time.
