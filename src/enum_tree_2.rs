@@ -203,7 +203,7 @@ impl Inst {
                 context.set_reg(register.0, new_value);
                 context.next_inst()
             }
-            Inst::GlobalSet { global, expr } => todo!(),
+            Inst::GlobalSet { .. } => todo!(),
             Inst::Branch { label } => context.branch_to(label.0),
             Inst::BranchIf { label, condition } => {
                 let condition = condition.evaluate(context);

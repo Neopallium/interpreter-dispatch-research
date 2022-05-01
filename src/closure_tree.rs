@@ -113,7 +113,7 @@ impl Eval for Register {
 }
 
 impl Eval for Bits {
-    fn eval(&self, context: &mut Context) -> Bits {
+    fn eval(&self, _context: &mut Context) -> Bits {
         *self
     }
 }

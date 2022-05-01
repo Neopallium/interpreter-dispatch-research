@@ -125,7 +125,7 @@ impl Eval for Register {
 }
 
 impl Eval for Bits {
-    fn eval(&self, context: &mut Context, _reg0: &mut Bits) -> Bits {
+    fn eval(&self, _context: &mut Context, _reg0: &mut Bits) -> Bits {
         *self
     }
 }
@@ -211,7 +211,7 @@ impl Inst {
 
     /// Returns execution of the function and returns the result in `result`.
     pub fn ret(result: Register) -> Self {
-        Self::new(move |context, reg0| handler::ret(context, result.0))
+        Self::new(move |context, _reg0| handler::ret(context, result.0))
     }
 }
 

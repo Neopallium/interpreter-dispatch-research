@@ -98,7 +98,7 @@ impl Inst {
 
     /// Returns execution of the function and returns the result in `result`.
     pub fn ret(result: Register) -> Self {
-        Self::new(move |context, reg0| handler::ret(context.context, result))
+        Self::new(move |context, _reg0| handler::ret(context.context, result))
     }
 }
 
