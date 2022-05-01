@@ -3,7 +3,7 @@ mod closure_loop;
 mod closure_tail;
 mod closure_tail_2;
 mod closure_tree;
-// mod closure_tree;
+mod closure_reg0;
 mod enum_tree;
 mod enum_tree_2;
 mod fused;
