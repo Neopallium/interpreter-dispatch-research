@@ -221,6 +221,7 @@ fn counter_loop() {
     let inst = Inst::basic_block(vec![
         Inst::exec(Expr::add(Register(0), Register(0), repetitions)),
         Inst::loop_block(Inst::branch_eqz(Expr::sub(Register(0), Register(0), 1))),
+        Inst::ret(Register(0)),
     ]);
     let mut context = Context::default();
     let mut reg0 = 0u64;
